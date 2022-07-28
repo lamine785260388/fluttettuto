@@ -112,46 +112,104 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
-class HomePage extends StatefulWidget {
-  //flat bouton
-  const HomePage({Key? key}) : super(key: key);
+//
+// class HomePage extends StatefulWidget {
+//   const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
+//   @override
+//   State<HomePage> createState() => _HomePageState();
+// }
 
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Icon button et flat button'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          FlatButton(
-            onPressed: () {
-              debugPrint("-------flatbutton ok-----");
-            },
-            child: Text(
-              'Button Flat',
-              style: TextStyle(fontSize: 20),
-            ),
-            color: Colors.blue,
-            textColor: Colors.white,
-          ),
-          IconButton(
-            onPressed: null,
-            icon: Icon(
-              Icons.thumb_up,
-              color: Colors.green,
-              size: 20,
-            ),
-            tooltip: 'j\aime', //le titre long clique
-          ),
-        ],
-      ),
-    );
-  }
-}
+// class _HomePageState extends State<HomePage> {
+//   String value = "";
+//   void onshow() {
+//     setState(() {
+//       value = new DateTime.now().toString();
+//     });
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('FloatAction button'),
+//       ),
+//       body: Column(
+//         children: <Widget>[
+//           Text(
+//             'value=$value',
+//             style: TextStyle(fontSize: 40, color: Colors.blue),
+//             textAlign: TextAlign.center,
+//           )
+//         ],
+//       ),
+//       floatingActionButton: FloatingActionButton.extended(
+//         onPressed: () => onshow(),
+//         backgroundColor: Colors.red,
+//         label: Text('Time'),
+//         icon: Icon(Icons.timer),
+//       ),
+//     );
+//   }
+// }
+// import 'package:flutter/material.dart';//radio
+
+// void main() => runApp(const MyApp());
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   static const String _title = 'Flutter Code Sample';
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: _title,
+//       home: Scaffold(
+//         appBar: AppBar(title: const Text(_title)),
+//         body: const MyStatefulWidget(),
+//       ),
+//     );
+//   }
+// }
+
+// enum SingingCharacter { lafayette, jefferson }
+
+// class MyStatefulWidget extends StatefulWidget {
+//   const MyStatefulWidget({Key? key}) : super(key: key);
+
+//   @override
+//   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+// }
+
+// class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+//   SingingCharacter? _character = SingingCharacter.lafayette;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       children: <Widget>[
+//         RadioListTile<SingingCharacter>(
+//           title: const Text('Lafayette'),
+//           value: SingingCharacter.lafayette,
+//           groupValue: _character,
+//           onChanged: (SingingCharacter? value) {
+//             setState(() {
+//               _character = value;
+//             });
+//           },
+//         ),
+//         RadioListTile<SingingCharacter>(
+//           title: const Text('Thomas Jefferson'),
+//           value: SingingCharacter.jefferson,
+//           groupValue: _character,
+//           onChanged: (SingingCharacter? value) {
+//             setState(() {
+//               _character = value;
+//             });
+//           },
+//         ),
+//       ],
+//     );
+//   }
+// }
