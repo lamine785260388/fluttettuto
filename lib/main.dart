@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: Homepage(),
+      home: HomePage(),
     );
   }
 }
@@ -55,60 +55,103 @@ class MyApp extends StatelessWidget {
 //   }
 // }
 
-class Homepage extends StatefulWidget {
-  const Homepage({Key? key}) : super(key: key);
+// class Homepage extends StatefulWidget {
+//   const Homepage({Key? key}) : super(key: key);
+
+//   @override
+//   State<Homepage> createState() => _HomepageState();
+// }
+
+// class _HomepageState extends State<Homepage> {
+//   var value = "Bienvenue chez Lamine Codeur";
+//   String value1 = "Bienvenue au tuto";
+//   void onclick() {
+//     setState(() {
+//       value = "cava djili comment tu vas";
+//     });
+//   }
+
+//   void onclick2(String value2) {
+//     setState(() {
+//       print("cliquer");
+//       value1 = value2;
+//     });
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     var information = "zgz";
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Raised Bouton"), //raised bouton
+//       ),
+//       body: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: <Widget>[
+//             RaisedButton(
+//               child: Text(
+//                 "1er bouton",
+//                 style: TextStyle(color: Colors.black),
+//               ),
+//               onPressed: () => onclick(),
+//             ),
+//             Text(value, style: TextStyle(color: Colors.green, fontSize: 40)),
+//             Divider(
+//               height: 10,
+//             ),
+//             RaisedButton(
+//                 child: Text(
+//                   "2e bouton",
+//                   style: TextStyle(color: Colors.pink[600]),
+//                 ),
+//                 onPressed: () => onclick2("tutoriel pour les debutant new ")),
+//             Text(value1,
+//                 style: TextStyle(
+//                     color: Colors.blue, fontSize: 40)), //ecrire un text
+//           ]),
+//     );
+//   }
+// }
+class HomePage extends StatefulWidget {
+  //flat bouton
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<Homepage> createState() => _HomepageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomepageState extends State<Homepage> {
-  var value = "Bienvenue chez Lamine Codeur";
-  String value1 = "Bienvenue au tuto";
-  void onclick() {
-    setState(() {
-      value = "cava djili comment tu vas";
-    });
-  }
-
-  void onclick2(String value2) {
-    setState(() {
-      print("cliquer");
-      value1 = value2;
-    });
-  }
-
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    var information = "zgz";
     return Scaffold(
       appBar: AppBar(
-        title: Text("Raised Bouton"),
+        title: Text('Icon button et flat button'),
       ),
       body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            RaisedButton(
-              child: Text(
-                "1er bouton",
-                style: TextStyle(color: Colors.black),
-              ),
-              onPressed: () => onclick(),
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          FlatButton(
+            onPressed: () {
+              debugPrint("-------flatbutton ok-----");
+            },
+            child: Text(
+              'Button Flat',
+              style: TextStyle(fontSize: 20),
             ),
-            Text(value, style: TextStyle(color: Colors.green, fontSize: 40)),
-            Divider(
-              height: 10,
+            color: Colors.blue,
+            textColor: Colors.white,
+          ),
+          IconButton(
+            onPressed: null,
+            icon: Icon(
+              Icons.thumb_up,
+              color: Colors.green,
+              size: 20,
             ),
-            RaisedButton(
-                child: Text(
-                  "2e bouton",
-                  style: TextStyle(color: Colors.pink[600]),
-                ),
-                onPressed: () => onclick2("tutoriel pour les debutant")),
-            Text(value1,
-                style: TextStyle(
-                    color: Colors.blue, fontSize: 40)), //ecrire un text
-          ]),
+            tooltip: 'j\aime', //le titre long clique
+          ),
+        ],
+      ),
     );
   }
 }
