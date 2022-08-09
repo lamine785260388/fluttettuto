@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tutoflutter1/slider&switch.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: HomePage(),
+      home: slideretswitch(),
     );
   }
 }
@@ -214,66 +215,67 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+             //checkbox chapter
+// class HomePage extends StatefulWidget {
+//   const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
+//   @override
+//   State<HomePage> createState() => _HomePageState();
+// }
 
-class _HomePageState extends State<HomePage> {
-  bool val1 = false;
-  bool val2 = false;
-  bool val3 = false;
-  void change1(bool? value) {
-    setState(() {
-      val1 = value!;
-    });
-  }
+// class _HomePageState extends State<HomePage> {
+//   bool val1 = false;
+//   bool val2 = false;
+//   bool val3 = false;
+//   void change1(bool? value) {
+//     setState(() {
+//       val1 = value!;
+//     });
+//   }
 
-  void change3(bool? value) {
-    setState(() {
-      val3 = value!;
-    });
-  }
+//   void change3(bool? value) {
+//     setState(() {
+//       val3 = value!;
+//     });
+//   }
 
-  void change2(bool? t) {
-    setState(() {
-      val2 = t!;
-    });
-  }
+//   void change2(bool? t) {
+//     setState(() {
+//       val2 = t!;
+//     });
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("checkbox")),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "bienvenue chez seydina codeur coder",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 30, 50, 200), fontSize: 15),
-            ),
-            Checkbox(value: val1, onChanged: change1),
-            CheckboxListTile(
-              value: val2,
-              onChanged: change2,
-              title: Text("mon titre"),
-              controlAffinity: ListTileControlAffinity.trailing,
-              subtitle: Text("sous titre"),
-            ),
-            CheckboxListTile(
-              value: val3,
-              onChanged: change3,
-              title: Text("mon titre 3"),
-              controlAffinity: ListTileControlAffinity.trailing,
-              subtitle: Text("sous titre 3"),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(title: Text("checkbox")),
+//       body: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: <Widget>[
+//             Text(
+//               "bienvenue chez seydina codeur coder",
+//               style: TextStyle(
+//                   color: Color.fromARGB(255, 30, 50, 200), fontSize: 15),
+//             ),
+//             Checkbox(value: val1, onChanged: change1),
+//             CheckboxListTile(
+//               value: val2,
+//               onChanged: change2,
+//               title: Text("mon titre"),
+//               controlAffinity: ListTileControlAffinity.trailing,
+//               subtitle: Text("sous titre"),
+//             ),
+//             CheckboxListTile(
+//               value: val3,
+//               onChanged: change3,
+//               title: Text("mon titre 3"),
+//               controlAffinity: ListTileControlAffinity.trailing,
+//               subtitle: Text("sous titre 3"),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
