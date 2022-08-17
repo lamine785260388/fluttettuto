@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tutoflutter1/slider&switch.dart';
 
+import 'TextField.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -15,9 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.orange,
+        primarySwatch: Colors.brown,
       ),
-      home: slideretswitch(),
+      home: textfiel(),
     );
   }
 }
