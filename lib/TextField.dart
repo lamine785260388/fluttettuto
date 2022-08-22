@@ -54,15 +54,16 @@ class _textfielState extends State<textfiel> {
               onSubmitted: sub,
             ),
             TextField(
-                decoration: InputDecoration(
-                    labelText: "Phone",
-                    hintText: "Entrer votre numéro",
-                    icon: Icon(
-                      Icons.phone,
-                      color: Colors.blue,
-                      size: 25,
-                    )),
-                keyboardType: TextInputType.number),
+              decoration: InputDecoration(
+                  labelText: "Phone",
+                  hintText: "Entrer votre numéro",
+                  icon: Icon(
+                    Icons.phone,
+                    color: Colors.blue,
+                    size: 25,
+                  )),
+              keyboardType: TextInputType.number,
+            ),
             TextField(
               decoration: InputDecoration(
                   labelText: "Mot de passe",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tutoflutter1/slider&switch.dart';
 
+import 'Appbar.dart';
 import 'TextField.dart';
 
 void main() {
@@ -16,10 +17,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.brown,
-      ),
-      home: textfiel(),
+      // theme: ThemeData(
+      //   primarySwatch: Colors.brown,
+      // ),
+      home: appbar(),
     );
   }
 }
