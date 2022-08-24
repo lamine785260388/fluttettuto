@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tutoflutter1/footer&sheet.dart';
 import 'package:tutoflutter1/slider&switch.dart';
+import 'package:tutoflutter1/snackbar.dart';
 
 import 'Appbar.dart';
 import 'Bottom-NavigationBar-BarredeNavigation.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData(
       //   primarySwatch: Colors.brown,
       // ),
-      home: MyStatefulWidget(),
+      home: snack_bar(),
     );
   }
 }
