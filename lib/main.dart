@@ -3,6 +3,7 @@ import 'package:tutoflutter1/footer&sheet.dart';
 import 'package:tutoflutter1/slider&switch.dart';
 
 import 'Appbar.dart';
+import 'Bottom-NavigationBar-BarredeNavigation.dart';
 import 'TextField.dart';
 import 'drawerMenu.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData(
       //   primarySwatch: Colors.brown,
       // ),
-      home: FooterSheet(),
+      home: MyStatefulWidget(),
     );
   }
 }
